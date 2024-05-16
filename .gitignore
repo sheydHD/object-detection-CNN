@@ -15,5 +15,3 @@ venv.bak/
 *.log
 *.pot
 *.swp
-Data/Train
-Data/Test
