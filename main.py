@@ -3,11 +3,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Sequential, load_model
-from tensorflow.keras.layers import (
-    Dense,
-    Dropout,
-    GlobalAveragePooling2D,
-)
+from tensorflow.keras.layers import Dense, Dropout, GlobalAveragePooling2D
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 from tensorflow.keras.applications import MobileNetV2
 from sklearn.model_selection import train_test_split
@@ -21,7 +17,6 @@ os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 # Set the base directory for your dataset
 base_dir = "Data\\Train"  # Change this to the path of your "Data/Train" directory
-
 model_path = "best_object_detector_model.keras"  # Path to save/load the model
 
 
@@ -81,7 +76,7 @@ def train_model(base_dir, img_size=(224, 224)):
     )
 
     num_classes = len(label_dict)
-    if num_classes > 2:
+    if (num_classes) > 2:
         y_train = tf.keras.utils.to_categorical(y_train, num_classes=num_classes)
         y_val = tf.keras.utils.to_categorical(y_val, num_classes=num_classes)
         loss = "categorical_crossentropy"
@@ -241,6 +236,16 @@ def clear_terminal():
 
 
 def main():
+    # Check if Data/Train directory exists
+    if not os.path.exists(base_dir):
+        clear_terminal()
+        print(f"Directory {base_dir} not found. ")
+        os.makedirs(base_dir)
+        print(
+            f"Creating directory {base_dir}. Please provide the training data in the Data/Train directory."
+        )
+        return
+
     img_size = (224, 224)  # Increase image size for better performance
 
     # Automatically detect directories and rename files
@@ -251,6 +256,11 @@ def main():
     train = input("Do you want to train the model? (yes/no): ").strip().lower()
     if train == "yes":
         train_model(base_dir, img_size)
+
+    if not os.path.exists(model_path):
+        clear_terminal()
+        print("Model not found. Please train the model first.")
+        return None
 
     detect_photo = (
         input("Do you want to upload a photo for object detection? (yes/no): ")
