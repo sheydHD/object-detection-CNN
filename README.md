@@ -22,14 +22,19 @@ This project is an object detection system that uses a deep learning model to id
 ## Installation
 
 1. Clone the repository:
+   ```
    git clone https://github.com/sheydHD/object-detection-CNN.git
+   ```
    
-2. Navigate to the project directory:
-  cd object-detection
-
-3. Install the required dependencies:
-  pip install -r requirements.txt
-
+3. Navigate to the project directory:
+   ```
+   cd object-detection
+   ```
+   
+5. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
 
 ## Usage
@@ -38,7 +43,7 @@ This project is an object detection system that uses a deep learning model to id
 - Create a directory named "Data" in the project root (if it doesn't exist yet).
 - Inside "Data", create a directory named "Train" (if it doesn't exist yet).
 - Place your training images in subdirectories within the "Train" directory, where each subdirectory represents a class label.
-  (In the given example there are 4 items included: cat, pliers, screwdriver and sword
+  (In the given example there are 4 items included: cats, pliers, screwdrivers and swords)
 
   
 2. Train the model:
@@ -47,14 +52,21 @@ This project is an object detection system that uses a deep learning model to id
   python main.py
   ```
 - When prompted, choose to train the model by entering "yes".
-
+- The code will train the model with the training objects you placed in Data/Train.
+- After it finishes, you will receive a trained model file: _best_object_detector_model.keras_.
 
 3. Detect objects in a photo:
 - Run the script:
   ```
   python main.py
   ```
+  
 - When prompted, choose to upload a photo for object detection by entering "yes".
 - Select the photo using the file dialog.
 - The script will display the detected object(s) with confidence scores.
 
+
+### Bonus
+- In the repository, I also included a pre-trained model for detecting the 4 objects mentioned above: _best_object_detector_model_advanced.keras_.
+- If you wish to test it, rename the file to _best_object_detector_model.keras_ (remember to rename your previous model if you have one).
+  
