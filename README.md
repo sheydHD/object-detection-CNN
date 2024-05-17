@@ -52,15 +52,21 @@ This project is an object detection system that uses a deep learning model to id
   python main.py
   ```
 - When prompted, choose to train the model by entering "yes".
-
+- The code will train the model with the training objects you placed in Data/Train.
+- After it finishes, you will receive a trained model file: _best_object_detector_model.keras_.
 
 3. Detect objects in a photo:
 - Run the script:
   ```
   python main.py
   ```
+  
 - When prompted, choose to upload a photo for object detection by entering "yes".
 - Select the photo using the file dialog.
 - The script will display the detected object(s) with confidence scores.
 
-## 
+
+### Bonus
+- In the repository, I also included a pre-trained model for detecting the 4 objects mentioned above: _best_object_detector_model_advanced.keras_.
+- If you wish to test it, rename the file to _best_object_detector_model.keras_ (remember to rename your previous model if you have one).
+  
