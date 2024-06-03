@@ -16,3 +16,4 @@ venv.bak/
 *.pot
 *.swp
 main_simple.py
+main_backup.py
