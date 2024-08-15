@@ -5,7 +5,11 @@ This project is an object detection system that uses a deep learning model to id
 ## Features
 
 - Train the object detection model on a custom dataset
+  ![image](https://github.com/user-attachments/assets/d16a0aba-91a9-4162-9825-cf45eb434377)
+
 - Detect objects in uploaded photos with confidence scores
+  ![image](https://github.com/user-attachments/assets/fa2c788f-d9ea-4499-828f-cf957cfc636b)
+
 - User-friendly interface for training and detection
 - Data augmentation techniques for improved model performance
 
@@ -51,9 +55,12 @@ This project is an object detection system that uses a deep learning model to id
   ```
   python main.py
   ```
-- When prompted, choose to train the model by entering "yes".
+- When prompted, train the model by entering "yes" or skip that part with "no".
+  ![image](https://github.com/user-attachments/assets/3ceae83f-c85e-4999-92aa-90808152d96b)
+
 - The code will train the model with the training objects you placed in Data/Train.
-- After it finishes, you will receive a trained model file: _best_object_detector_model.keras_.
+- After it finishes, you will receive a trained model file: _best_object_detector_model.keras_ and the model will ask you to select a photo for detection.
+  ![image](https://github.com/user-attachments/assets/c3bf7d4b-8807-431f-81be-5d29d80e3d74)
 
 3. Detect objects in a photo:
 - Run the script:
@@ -62,8 +69,9 @@ This project is an object detection system that uses a deep learning model to id
   ```
   
 - When prompted, choose to upload a photo for object detection by entering "yes".
-- Select the photo using the file dialog.
+- Select the photo using the file dialogue.
 - The script will display the detected object(s) with confidence scores.
+  ![image](https://github.com/user-attachments/assets/6e070e56-c6e5-4104-a7a7-ba2c94ee096a)
 
 
 ### Bonus
