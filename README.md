@@ -5,9 +5,9 @@ This project is an object detection system that uses a deep learning model to id
 ## Features
 
 - Train the object detection model on a custom dataset
-- ![image](https://github.com/user-attachments/assets/d16a0aba-91a9-4162-9825-cf45eb434377)
+![image](https://github.com/user-attachments/assets/d16a0aba-91a9-4162-9825-cf45eb434377)
 - Detect objects in uploaded photos with confidence scores
-- ![image](https://github.com/user-attachments/assets/fa2c788f-d9ea-4499-828f-cf957cfc636b)
+![image](https://github.com/user-attachments/assets/fa2c788f-d9ea-4499-828f-cf957cfc636b)
 - User-friendly interface for training and detection
 - Data augmentation techniques for improved model performance
 
